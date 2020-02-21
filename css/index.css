@@ -1,3 +1,45 @@
+/* display: flex;
+    flex-direction: center;
+    align-items: center;
+    }
+
+    //mixins above//
+
+    /*@media @mobile {
+    .container home {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 70%;
+        height: 75%;
+        margin-top: 20px;
+        margin-right: 10%;
+        padding: 5%;
+    }
+    }
+
+    @media (max-width: 500px) {
+    .img {
+        width: 70%;
+        height: 75%;
+        margin-top: 20px;
+        margin-right: 10%;
+    }
+    }
+
+    @media @mobile {
+    .container home {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 70%;
+        height: 75%;
+        margin-top: 20px;
+        margin-right: 10%;
+        padding: 5%;
+    }
+    }
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -147,40 +189,40 @@ body {
     align-items: center;
   }
 }
-.container .home {
+.home {
   width: 100vw;
 }
-.container .container home hr {
+.container home hr {
   border-top: 2px dashed silver;
 }
-.container h1,
-.container h2,
-.container h3,
-.container h4,
-.container h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Indie Flower", cursive;
 }
-.container h1 {
+h1 {
   font-size: 4rem;
 }
-.container h2 {
+h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
 }
-.container h4 {
+h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
 }
-.container p {
+p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
 }
-.container img {
+img {
   max-width: 100%;
   height: auto;
 }
-.container .btn {
+.btn {
   display: block;
   background-color: skyblue;
   margin: 0 10px 20px;
@@ -194,6 +236,16 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+.btn:hover {
+  color: green;
+}
+@media (max-width: 500px) {
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 header {
   width: 80%;
@@ -210,7 +262,8 @@ header .nav {
   font-size: 14px;
 }
 header h1 {
-  font-size: 20px;
+  font-size: 25px;
+  font-family: "Indie Flower";
 }
 .home {
   margin-right: 2%;
@@ -252,6 +305,14 @@ header h1 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
@@ -267,6 +328,14 @@ header h1 {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
 }
+@media (max-width: 500px) {
+  .home .inverse-content {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
 .home .inverse-content .text-content {
   padding-left: 1%;
   padding-right: 0;
@@ -279,6 +348,14 @@ header h1 {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -287,6 +364,15 @@ header h1 {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .home .content-pick .destination {
   width: 30%;

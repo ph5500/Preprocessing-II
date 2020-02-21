@@ -16,57 +16,66 @@ body {
   margin-left: 20%;
   max-width: 800px;
   //width: 80vw;
-
   @media @mobile {
     flex-direction: column;
     align-items: center;
   }
+}
 
-  .home {
-    width: 100vw;
+.home {
+  width: 100vw;
+}
+.container home hr {
+  border-top: 2px dashed silver;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Indie Flower", cursive;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  .custom-btn-one(@btn-color:skyblue, @font-color:white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    color: green;
   }
+}
 
-  .container home hr {
-    border-top: 2px dashed silver;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: "Indie Flower", cursive;
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 3.2rem;
-    padding-bottom: 10px;
-  }
-
-  h4 {
-    font-size: 2.5rem;
-    padding-bottom: 10px;
-  }
-
-  p {
-    line-height: 1.5;
-    font-size: 1.6rem;
-    padding-bottom: 10px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    .custom-btn-one(@btn-color:skyblue, @font-color:white);
-    text-align: center;
+.btn {
+  @media @mobile {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
