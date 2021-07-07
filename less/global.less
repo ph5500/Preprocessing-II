@@ -6,12 +6,35 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
-  font-family: 'Roboto', sans-serif;
+html,
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Indie Flower', cursive;
+.container {
+  background-color: white;
+  margin-left: 20%;
+  max-width: 800px;
+  //width: 80vw;
+  @media @mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.home {
+  width: 100vw;
+}
+.container home hr {
+  border-top: 2px dashed silver;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Indie Flower", cursive;
 }
 
 h1 {
@@ -39,8 +62,20 @@ img {
   height: auto;
 }
 
-.container {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
+.btn {
+  .custom-btn-one(@btn-color:skyblue, @font-color:white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    color: green;
+  }
+}
+
+.btn {
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
